@@ -8,10 +8,12 @@ public class SimpleMathTest {
 
     private static final SimpleMath MATH = new SimpleMath();
 
+    //Nomenclatura de Testes: test[SystemUnderTest]_[ConditionOrStateChange]_[ExpectedResult]
+
     @Test
-    void testSum() {
-        Double actual = MATH.sum(2.5, 3.5);
-        double expected = 6.0;
+    void testSum_When_TwoIsAddedByThree_ShouldReturnFive() {
+        Double actual = MATH.sum(2.0, 3.0);
+        double expected = 5.0;
 
         assertEquals(expected, actual, "testSum() did not produce the expected result.");
         // o parâmetro message só é impresso quando o teste falha
@@ -22,7 +24,7 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testSubtraction() {
+    void testSubtraction_WhenFiveIsSubtractedFromTen_ShouldReturnFive() {
         Double actual = MATH.subtraction(10.0, 5.0);
         double expected = 5.0;
 
