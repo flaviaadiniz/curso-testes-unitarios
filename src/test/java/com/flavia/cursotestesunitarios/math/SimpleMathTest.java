@@ -35,7 +35,7 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testMultiplication() {
+    void testMultiplication_WhenTenIsMultipliedByFive_ShouldReturnFifty() {
         Double actual = MATH.multiplication(10.0, 5.0);
         double expected = 50.0;
 
@@ -46,7 +46,7 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testDivision() {
+    void testDivision_WhenTenIsDividedByFive_ShouldReturnTwo() {
         Double actual = MATH.division(10.0, 5.0);
         double expected = 2.0;
 
@@ -57,7 +57,7 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testMean() {
+    void testMean_WhenTenIsAddedByFiveAndDividedByTwo_ShouldReturnSevenPointFive() {
         Double actual = MATH.mean(10.0, 5.0);
         double expected = 7.5;
 
@@ -68,7 +68,7 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testSquareRoot() {
+    void testSquareRoot_WhenCalculateSquareRootOfFour_ShouldReturnTwo() {
         Double actual = MATH.squareRoot(4.0);
         double expected = 2.0;
 
