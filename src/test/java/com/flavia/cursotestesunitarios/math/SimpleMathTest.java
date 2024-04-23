@@ -1,9 +1,6 @@
 package com.flavia.cursotestesunitarios.math;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,6 +17,18 @@ public class SimpleMathTest {
     static void cleanUp() {
         System.out.println("Running @AfterAll method");
     }
+
+    @BeforeEach
+    void beforeEach() {
+        System.out.println("Running @BeforeEach method");
+    }
+
+    @AfterEach
+    void afterEach() {
+        System.out.println("Running @AfterEach method");
+    }
+
+
 
     //Nomenclatura de Testes: test[SystemUnderTest]_[ConditionOrStateChange]_[ExpectedResult]
 
