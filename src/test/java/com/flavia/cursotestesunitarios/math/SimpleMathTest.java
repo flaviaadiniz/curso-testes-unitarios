@@ -130,4 +130,16 @@ public class SimpleMathTest {
         System.out.println("Expected: " + expected + " | Actual: " + actual);
     }
 
+    @Test
+    @DisplayName("Test Division by Zero")
+    void testDivision_WhenFirstNumberIsDividedByZero_ShouldThrowArithmeticException() {
+        // given
+        double firstNumber = 10.0;
+        double secondNumber = 0.0;
+
+        // when & then
+        assertThrows(ArithmeticException.class, () -> MATH.division(firstNumber, secondNumber));
+    }
+
+
 }

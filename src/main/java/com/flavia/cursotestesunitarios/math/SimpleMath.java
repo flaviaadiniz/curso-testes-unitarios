@@ -15,7 +15,10 @@ public class SimpleMath {
     }
 
     public Double division(Double firstNumber, Double secondNumber) {
-        return firstNumber / secondNumber;
+        if (secondNumber.equals(0.0)) {
+            throw new ArithmeticException();
+        }
+        return  firstNumber/secondNumber;
     }
 
     public Double mean(Double firstNumber, Double secondNumber) {
@@ -23,7 +26,7 @@ public class SimpleMath {
     }
 
     public Double squareRoot(Double number) {
-        return (Double) Math.sqrt(number);
+        return Math.sqrt(number);
     }
 
 }
