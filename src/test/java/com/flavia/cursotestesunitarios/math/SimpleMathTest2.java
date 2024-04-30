@@ -16,7 +16,6 @@ public class SimpleMathTest2 {
     @BeforeEach
     void beforeEach() {
         math = new SimpleMath();
-        System.out.println("Running @BeforeEach method");
     }
 
 
