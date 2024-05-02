@@ -3,6 +3,7 @@ package com.flavia.cursotestesunitarios.math;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
@@ -21,7 +22,13 @@ public class SimpleMathTest2 {
 
     @DisplayName("Test - Division")
     @ParameterizedTest
-    @MethodSource("testDivisionInputParameter")
+//    @MethodSource("testDivisionInputParameter")
+    @CsvSource({
+            "10.0, 2.0, 5.0",
+            "8.0, 2.0, 4.0",
+            "7.5, 3.0, 2.5",
+            "9.0, 3.0, 3.0"
+    })
     void testDivision_WhenTenIsDividedByFive_ShouldReturnTwo(double firstNumber, double secondNumber, double expected) {
 
         // when
@@ -35,14 +42,14 @@ public class SimpleMathTest2 {
     }
 
 
-    public static Stream<Arguments> testDivisionInputParameter() {
-        return Stream.of(
-          Arguments.of(10.0, 2.0, 5.0),
-          Arguments.of(8.0, 2.0, 4.0),
-          Arguments.of(7.5, 3.0, 2.5),
-          Arguments.of(9.0, 3.0, 3.0)
-        );
-    }
+//    public static Stream<Arguments> testDivisionInputParameter() {
+//        return Stream.of(
+//          Arguments.of(10.0, 2.0, 5.0),
+//          Arguments.of(8.0, 2.0, 4.0),
+//          Arguments.of(7.5, 3.0, 2.5),
+//          Arguments.of(9.0, 3.0, 3.0)
+//        );
+//    }
 
 
 }
