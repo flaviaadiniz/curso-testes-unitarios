@@ -1,9 +1,6 @@
 package com.flavia.cursotestesunitarios.math;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -20,12 +17,14 @@ public class DemoRepeatedTest {
 
     @RepeatedTest(3)
     @DisplayName("Test Division by Zero")
-    void testDivision_WhenFirstNumberIsDividedByZero_ShouldThrowArithmeticException(RepetitionInfo repetitionInfo) {
+    void testDivision_WhenFirstNumberIsDividedByZero_ShouldThrowArithmeticException(RepetitionInfo repetitionInfo, TestInfo testInfo) {
         // given
         double firstNumber = 10.0;
         double secondNumber = 0.0;
 
-        System.out.println("Repetition number: " + repetitionInfo.getCurrentRepetition());
+        System.out.println("Repetition number: " + repetitionInfo.getCurrentRepetition() + " of "
+        + repetitionInfo.getTotalRepetitions());
+        System.out.println("Running " + testInfo.getTestMethod().get().getName());
 
         // when & then
         assertThrows(ArithmeticException.class, () -> math.division(firstNumber, secondNumber));
