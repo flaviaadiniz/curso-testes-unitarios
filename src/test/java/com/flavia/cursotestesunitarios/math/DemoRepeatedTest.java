@@ -15,7 +15,7 @@ public class DemoRepeatedTest {
     }
 
 
-    @RepeatedTest(3)
+    @RepeatedTest(value = 3, name = "{displayName}. Repetition {currentRepetition} of {totalRepetitions}!" )
     @DisplayName("Test Division by Zero")
     void testDivision_WhenFirstNumberIsDividedByZero_ShouldThrowArithmeticException(RepetitionInfo repetitionInfo, TestInfo testInfo) {
         // given
