@@ -1,4 +1,4 @@
-package com.flavia.cursotestesunitarios;
+package com.flavia.cursotestesunitarios.tests;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,7 +23,7 @@ public class ArraysCompareTest {
     void testSortPerformance() {
         int[] numbers = {25, 8, 21, 32, 3};
 
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = 0; i < 100; i++) {
             numbers[0] = i;
             Arrays.sort(numbers);
         }

@@ -1,15 +1,17 @@
-package com.flavia.cursotestesunitarios;
+package com.flavia.cursotestesunitarios.tests;
 
 import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
-@TestMethodOrder(MethodOrderer.Random.class)
-public class MethodOrderRandomTest {
+@Order(1)
+@TestMethodOrder(MethodOrderer.MethodName.class)
+public class MethodOrderByNameTest {
 
     @Test
-    void testA() {
-        System.out.println("Running Test A");
+    void testC() {
+        System.out.println("Running Test C");
     }
 
     @Test
@@ -18,8 +20,8 @@ public class MethodOrderRandomTest {
     }
 
     @Test
-    void testC() {
-        System.out.println("Running Test C");
+    void testA() {
+        System.out.println("Running Test A");
     }
 
     @Test
